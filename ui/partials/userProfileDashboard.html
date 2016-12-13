@@ -1,0 +1,215 @@
+	
+	<div class="middle" ng-cloak style="background:lightgray">
+				
+		<!-- <h3>Dashboard with Angular Material Tabs (light theme)</h3> -->
+			<style>
+				@font-face {
+				  font-family:"icomoon";
+				  src:url("https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.eot");
+				  font-weight:normal;
+				  font-style:normal;
+				}
+
+				@font-face {
+				  font-family: 'icomoon';
+				  src:url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.eot?-cmq1um');
+				  src:url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.eot?#iefix-cmq1um') format('embedded-opentype'),
+				  url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.woff?-cmq1um') format('woff'),
+				  url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.ttf?-cmq1um') format('truetype'),
+				  url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.svg?-cmq1um#icomoon') format('svg');
+				  font-weight: normal;
+				  font-style: normal;
+				}
+			</style>
+
+			Light Version
+			<div ng-cloak class="tabsdemoDynamicHeight">
+
+				<md-content md-theme="">
+					<md-tabs md-dynamic-height md-border-bottom>
+						<md-tab label="User Info">
+							<md-content class="md-padding">
+								<md-content class="md-no-momentum" layout-padding>
+									<div layout="row" layout-padding ng-cloak>
+										<md-input-container>
+											<md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
+											<input type="text" ng-model="user.name" placeholder="Name">
+										</md-input-container>
+
+										<md-input-container>
+											<md-icon md-svg-src="img/icons/ic_email_24px.svg"></md-icon>
+											<input ng-model="user.email" type="email" placeholder="Email">
+										</md-input-container>
+										
+										<md-input-container>
+											<md-icon md-svg-src="img/icons/ic_phone_24px.svg"></md-icon>
+											<input ng-model="user.phone" type="text" placeholder="Phone">
+										</md-input-container>
+										
+										<md-input-container class="md-block">
+											<!-- <md-icon md-svg-src="img/icons/ic_extension_24px.svg"></md-icon> -->
+											<label>Chips</label>
+											<input ng-model="user.chips" disabled placeholder="Chips">
+										</md-input-container>
+<!-- 
+										<md-input-container>
+											<label>Enter Birth Date:</label>
+											<md-datepicker ng-model="user.birthday"></md-datepicker>
+											<md-icon md-svg-icon="social:cake" style="color:#00F;" aria-label="Cake"></md-icon>
+										</md-input-container>
+ -->
+									</div>
+									<div>
+										<md-button class="md-raised">Edit</md-button>
+										<md-button class="md-raised md-primary">Save</md-button>
+										<!-- <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button> -->
+										<md-button class="md-raised md-warn">Buy Chips</md-button>
+									</div>
+								</md-content>							
+							</md-content>
+						</md-tab>
+						<md-tab label="Player Status">
+							<md-content class="md-padding">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.</p>
+								<p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
+								<p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+							</md-content>
+						</md-tab>
+						<md-tab label="Points Status">
+							<md-content class="md-padding">
+								<p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+							</md-content>
+						</md-tab>
+						<md-tab label="Game History">
+							<md-content class="md-padding">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+							</md-content>
+						</md-tab>
+						<md-tab label="Points History">
+							<md-content class="md-padding">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.</p>
+								<p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
+								<p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+							</md-content>
+						</md-tab>
+						<md-tab label="KYC">
+							<md-content class="md-padding">
+								<p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+							</md-content>
+						</md-tab>
+						<md-tab label="Settings">
+							<md-content class="md-padding">
+								<p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+							</md-content>
+						</md-tab>
+					</md-tabs>
+				</md-content>		
+				
+				<md-content md-theme="" flex layout-padding>
+				</md-content> 
+			
+				<md-content md-theme="">
+				<form layout="row" layout-align="end end" ng-submit="play2()">
+					<md-button class="md-raised" type="submit">Play for Fun</md-button>
+					<md-button class="md-raised" type="submit">Play for Real</md-button>
+				</form>
+				</md-content> 
+			
+			</div>			
+	
+			Dark Version
+			<div ng-cloak class="tabsdemoDynamicHeight">
+
+				<md-content md-theme="docs-dark">
+					<md-tabs md-dynamic-height md-border-bottom>
+						<md-tab label="User Info">
+							<md-content class="md-padding">
+								<md-content class="md-no-momentum" layout-padding>
+									<div layout="row" layout-padding ng-cloak>
+										<md-input-container>
+											<md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
+											<input type="text" ng-model="user.name" placeholder="Name">
+										</md-input-container>
+
+										<md-input-container>
+											<md-icon md-svg-src="img/icons/ic_email_24px.svg"></md-icon>
+											<input ng-model="user.email" type="email" placeholder="Email">
+										</md-input-container>
+										
+										<md-input-container>
+											<md-icon md-svg-src="img/icons/ic_phone_24px.svg"></md-icon>
+											<input ng-model="user.phone" type="text" placeholder="Phone">
+										</md-input-container>
+										
+										<md-input-container class="md-block">
+											<!-- <md-icon md-svg-src="img/icons/ic_extension_24px.svg"></md-icon> -->
+											<label>Chips</label>
+											<input ng-model="user.chips" disabled placeholder="Chips">
+										</md-input-container>
+<!-- 
+										<md-input-container>
+											<label>Enter Birth Date:</label>
+											<md-datepicker ng-model="user.birthday"></md-datepicker>
+											<md-icon md-svg-icon="social:cake" style="color:#00F;" aria-label="Cake"></md-icon>
+										</md-input-container>
+ -->
+									</div>
+									<div>
+										<md-button class="md-raised">Edit</md-button>
+										<md-button class="md-raised md-primary">Save</md-button>
+										<!-- <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button> -->
+										<md-button class="md-raised md-warn">Buy Chips</md-button>
+									</div>
+								</md-content>							
+							</md-content>
+						</md-tab>
+						<md-tab label="Player Status">
+							<md-content class="md-padding">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.</p>
+								<p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
+								<p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+							</md-content>
+						</md-tab>
+						<md-tab label="Points Status">
+							<md-content class="md-padding">
+								<p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+							</md-content>
+						</md-tab>
+						<md-tab label="Game History">
+							<md-content class="md-padding">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+							</md-content>
+						</md-tab>
+						<md-tab label="Points History">
+							<md-content class="md-padding">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.</p>
+								<p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
+								<p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+							</md-content>
+						</md-tab>
+						<md-tab label="KYC">
+							<md-content class="md-padding">
+								<p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+							</md-content>
+						</md-tab>
+						<md-tab label="Settings">
+							<md-content class="md-padding">
+								<p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+							</md-content>
+						</md-tab>
+					</md-tabs>
+				</md-content>		
+				
+				<md-content md-theme="docs-dark" flex layout-padding>
+				</md-content> 
+			
+				<md-content md-theme="docs-dark">
+				<form layout="row" layout-align="end end" ng-submit="play2()">
+					<md-button class="md-raised" type="submit">Play for Fun</md-button>
+					<md-button class="md-raised" type="submit">Play for Real</md-button>
+				</form>
+				</md-content> 
+			
+			</div>			
+	
+	</div> 

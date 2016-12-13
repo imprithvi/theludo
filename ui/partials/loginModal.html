@@ -1,0 +1,38 @@
+
+	<div class="login">
+		
+		<div class="modal-header">
+			<h3 class="modal-title" id="modal-title">{{page}}</h3>
+			<!-- p>Notes: Google login is not fully authorized (click button to see details) . Facebook login is not implemented.</p> -->
+		</div>
+		<div class="modal-body" id="modal-body">
+			<form ng-submit="LoginModalCtrl.submitModal(email, password)">
+				<input type="text" ng-model="email" />
+				<input type="password" ng-model="password" />
+				<md-button class="md-raised md-primary" type="submit" style="margin:0px;">theludo Login</md-button>
+			</form>
+		</div>
+		<!-- <div class="modal-header">
+			<h3 class="modal-title" id="modal-title">Google Login</h3>
+		</div> -->
+		<div class="modal-body" id="modal-body">
+			<!-- <h3 class="modal-title" id="modal-title">Google Login</h3> -->
+			<form ng-submit="LoginModalCtrl.google()">
+				<md-button class="md-raised md-warn" type="submit" style="margin:0px;">Google Login</md-button>
+			</form>
+		</div>
+		<!-- <div class="modal-header">
+			<h3 class="modal-title" id="modal-title">Facebook Login</h3>
+		</div> -->
+		<div class="modal-body" id="modal-body">
+			<!-- <h3 class="modal-title" id="modal-title">Facebook Login</h3> -->
+			<form ng-submit="LoginModalCtrl.facebook()">
+				<md-button class="md-raised md-primary" type="submit" style="margin:0px;">Facebook Login</md-button>
+			</form>
+			
+		</div>
+		
+		<div class="modal-footer">
+			<!-- <button class="btn btn-warning" type="button" ng-click="LoginModalCtrl.cancel()">Cancel</button> -->
+		</div>
+	</div>

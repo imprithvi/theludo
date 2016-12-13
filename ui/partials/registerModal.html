@@ -1,0 +1,17 @@
+
+<div class="login">
+	<div class="modal-header">
+		<h3 class="modal-title" id="modal-title">{{page}}</h3>
+	</div>
+	<div class="modal-body" id="modal-body">
+		<form ng-submit="$ctrl.submit(name, email, password)">
+			<input type="name" ng-model="name" />
+			<input type="email" ng-model="email" />
+			<input type="password" ng-model="password" />
+			<md-button class="md-raised md-primary" type="submit" style="margin:0px;">Sign Up</md-button>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<md-button class="md-raised md-warn" ng-click="$ctrl.cancel()" style="margin:0px;">Cancel</md-button>
+	</div>
+</div>

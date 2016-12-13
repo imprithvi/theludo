@@ -1,0 +1,134 @@
+
+	<!-- <div class="middle"> -->
+		<style>
+		
+			.red { background: #ff8a80; } 
+			.green { background: #b9f6ca; } 
+			.black { background: rgba(0,0,0,0.5); } 
+			.yellow { background: #ffff8d; } 
+			.white { background: #ffffff; }
+			
+			#sidebar { 
+				position: absolute;
+				top:100px;
+				margin: 0px;
+				width: 25%; 
+				min-width:300px;
+				color:black;
+				bottom:0px;
+				padding: 10px;
+				background: rgba(0,0,0,0.5);
+			}
+			#bottombar { 
+				position: absolute;
+				width: 100%;
+				bottom:0px;
+				height:30px;
+				z-index:2;
+			}
+			#rightbar { 
+				position: absolute;
+				width:20px;
+				top:0px;
+				right:0px;
+				height:100%;
+				z-index:2;
+			}
+			
+			#sidebar h3 { 
+				border:3px solid black;
+				border-radius: 10px;
+				margin: 10px;
+				padding: 10px;
+				width: 90%; 
+				color:black;
+				text-align:center;
+				font-weight:700;
+			}
+			
+			#sidebar div { 
+				/*border:1px solid black;
+				border-radius: 10px;*/
+				margin: 10px;
+				padding: 10px;
+				width: 90%; 
+				color:black;
+				height:80%;
+			}
+			/*
+			button {
+				color: rgba(127,255,255,0.75);
+				color: rgba(0,0,0,0.75);
+				background: transparent;
+				outline: 1px solid rgba(127,255,255,0.75);
+				border: 0px;
+				padding: 5px 10px;
+				cursor: pointer;
+				border-radius:0px;
+			}
+			button:hover {
+				background-color: rgba(255,255,255,0.5);
+			}
+			button:active {
+				color: #000000;
+				background-color: rgba(0,255,255,0.75);
+			}
+			*/
+		</style>
+		
+<!-- 
+		<div class="gameheader red">
+			view: game.html
+			<h1>Game Header</h1>
+		</div>
+		<div class="gamesidebar green">
+			<div>Game Control Panel</div>
+			<ul>
+				<li>Game Bet : 200RS</li>
+				<li>Game Stats : 30 pts</li>
+				<li>History Stats : 60 pts</li>
+				<li>Winning Probabilities : 95%</li>
+				<li><button class='btn btn-primary'>Raise the Stakes</button></li>
+				<li>Purse
+					<ul>
+						<li>Real Chips : 30</li>
+						<li>Play Chips : 60</li>
+						<li>Account  : 95%</li>
+						<li><button class='btn btn-danger'>Buy Chips</button></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+ -->
+	<md-content id="sidebar" md-theme="docs-dark">
+		<h3 class="white">Game Control Panel</h3>
+		<div 3 class="white">
+			<table class="table">
+				<tr><td>Your Color:</td><td><md-button class="md-raised md-primary" style="margin:0"></md-button></td></tr>
+				<tr><td>Current Player:</td><td><md-button class="md-raised md-warn" style="margin:0px;"></md-button></td></tr>
+				<tr><td>Next player:</td><td><md-button class="md-raised md-accent" style="margin:0px;"></md-button></td></tr>
+				<tr><td>Enabled Dice:</td><td><md-button id="throwDice" class="md-raised md-primary" style="margin:0px;">Throw</md-button></td></tr>
+				<tr><td>Disabled Dice:</td><td><md-button class="md-raised" style="margin:0px;">Throw</md-button></td></tr>
+				<tr><td>Take a Risk:</td><td><md-button class="md-raised md-primary" style="margin:0px;">Raise Bet</md-button></td></tr>
+				<tr><td>Chips:</td><td><md-button class="md-raised md-warn" style="margin:0px;">30</md-button></td></tr>
+				<tr><td><md-button class="md-raised md-warn" style="margin:0px;">BUY CHIPS</md-button></td><td></td></tr>
+			</table>
+		</div>
+	</md-content>
+	
+	<!-- <div id="sidebar">
+		<h3 class="white">Game Control Panel</h3>
+		<div 3 class="white">
+			<p>Your color: "placeholder"</p>
+			<p>Current player: "placeholder"</p>
+			<p>Play: <button id="throwDice">throw dice</button></p>
+			<p>Go crazy: <button id="throwDice">suggest bet increase</button></p>
+			<p>Chips in hand: 300</p>
+			<p>Chips in bank: 3000</p>
+			<p><button id="throwDice">BUY CHIPS</button></p>
+		</div>
+	</div> -->
+	<div id="viewport"></div>
+	<div id="rightbar" class="black"></div>
+	<div id="bottombar" class="black"></div>
+	<!-- </div> -->

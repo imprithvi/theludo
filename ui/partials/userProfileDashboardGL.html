@@ -1,0 +1,151 @@
+	
+	<div class="middle" ng-cloak>
+		
+		<!-- <h3>Dashboard with Angular Material Grid List</h3> -->
+		
+			<style type="text/css">
+				.gridListdemoBasicUsage md-grid-list {
+				  margin: 8px;
+				}
+
+				.gridListdemoBasicUsage .gray {
+				  background: #f5f5f5; }
+				
+				.gridListdemoBasicUsage .gray h3 {
+				  background: transparent; font-size:1.5em; }
+
+				.gridListdemoBasicUsage .green {
+				  background: #b9f6ca;  color:black;}
+				  
+				.gridListdemoBasicUsage .green h3 {
+				  background: transparent; font-size:1.5em; }
+
+				.gridListdemoBasicUsage .yellow {
+				  background: #ffff8d;  color:black;}
+				  
+				.gridListdemoBasicUsage .yellow h3 {
+				  background: transparent; font-size:1.5em; }
+
+				.gridListdemoBasicUsage .blue {
+				  background: #64dddd;  color:black; }
+				  
+				.gridListdemoBasicUsage .blue h3 {
+				  background: transparent; font-size:1.5em; }
+
+				.gridListdemoBasicUsage .purple {
+				  background: #b388ff; }
+
+				.gridListdemoBasicUsage .red {
+				  background: #ff8a80; color:black; }
+				  
+				.gridListdemoBasicUsage .red h3 {
+				  background: transparent; font-size:1.5em; }
+				  
+				.gridListdemoBasicUsage .black {
+				  background: #000000; color:white; }
+				  
+				.gridListdemoBasicUsage .black h3 {
+				  background: transparent; font-size:1.5em; }
+
+				.gridListdemoBasicUsage md-grid-tile {
+				  transition: all 400ms ease-out 50ms; }
+			</style>
+			
+			<div ng-cloak="" class="gridListdemoBasicUsage" ng-app="MyApp">
+			
+				<md-content md-theme="docs-dark">
+				
+					<md-grid-list md-cols-xs="1" md-cols-sm="2" md-cols-md="5" md-cols-gt-md="5" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="8px">
+
+					<!-- <md-grid-tile class="red" md-rowspan="1" md-colspan="5" md-colspan-sm="5" md-colspan-xs="5" md-row-height="fit" style="height: 100px;">
+						<h3>{{page}}</h3>
+					</md-grid-tile> -->
+				  
+					<md-grid-tile class="gray" md-rowspan="1" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1">
+					  <md-grid-tile-header>
+						<h3>User Info</h3>
+					  </md-grid-tile-header>
+					  <md-grid-tile-footer>
+						<h4>Last Update: {{date}}</h4>
+					  </md-grid-tile-footer>
+					</md-grid-tile>
+
+					<md-grid-tile class="blue" md-rowspan="1" md-colspan="2" md-colspan-sm="2" md-colspan-xs="2">
+					  <md-grid-tile-header>
+						<h3>Player Status</h3>
+					  </md-grid-tile-header>
+					  <md-grid-tile-footer>
+						<h4>Last Update: {{date}}</h4>
+					  </md-grid-tile-footer>
+					</md-grid-tile>
+					
+					<md-grid-tile class="yellow" md-rowspan="1" md-colspan="2" md-colspan-sm="2" md-colspan-xs="2">
+					  <md-grid-tile-header>
+						<h3>Points Status</h3>
+					  </md-grid-tile-header>
+					  <md-grid-tile-footer>
+						<h4>Last Update: {{date}}</h4>
+					  </md-grid-tile-footer>
+					</md-grid-tile>
+
+					<md-grid-tile class="yellow">
+						<md-grid-tile-header>
+							<h3>Game History</h3>
+						</md-grid-tile-header>
+						<md-grid-tile-footer>
+							<h4>Last Update: {{date}}</h4>
+						</md-grid-tile-footer>
+					</md-grid-tile>
+
+					<md-grid-tile class="blue" md-rowspan="1">
+						<md-grid-tile-header>
+							<h3>Points History</h3>
+						</md-grid-tile-header>
+						<md-grid-tile-footer>
+							<h4>Last Update: {{date}}</h4>
+						</md-grid-tile-footer>
+					</md-grid-tile>
+
+					<md-grid-tile class="red" md-rowspan="1" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1">
+						<md-grid-tile-header>
+							<h3>KYC</h3>
+						</md-grid-tile-header>
+						<md-grid-tile-footer>
+							<h4>Last Update: {{date}}</h4>
+						</md-grid-tile-footer>
+					</md-grid-tile>
+
+					<md-grid-tile class="green" md-rowspan="1">
+						<md-grid-tile-header>
+							<h3>Settings</h3>
+						</md-grid-tile-header>
+						<md-grid-tile-footer>
+							<h4>Last Update: {{date}}</h4>
+						</md-grid-tile-footer>
+					</md-grid-tile>
+					
+					<md-grid-tile class="green" md-rowspan="1">
+						<form layout="column" style="width:100%;height:100%;padding:4px;padding-right:6px;padding-left:6px;" layout-align="center center" ng-submit="play2()">
+						<md-button class="md-raised md-primary" type="submit" style="width:100%;height:50%;margin-bottom:2px;">Play for Fun</md-button>
+						<md-button class="md-raised md-warn" type="submit" style="width:100%;height:50%;margin-top:2px;">Play for Real</md-button>
+						</form>
+					</md-grid-tile>
+					
+					</md-grid-list>
+					
+					<form layout="row" layout-align="center center" style="width:100%;height:100%;padding:0px;margin:0px;" ng-submit="play2()">
+						<md-button class="md-raised md-primary" type="submit" style="width:50%;height:100%;margin-right:2px;">Play for Fun</md-button>
+						<md-button class="md-raised md-warn" type="submit" style="width:50%;height:100%;margin-left:2px;">Play for Real</md-button>
+					</form>
+				  
+				</md-content>
+			  
+			</div>
+			
+	</div>
+				
+				
+				
+				
+
+     
